@@ -11,4 +11,14 @@ describe('wrap', () => {
   it('Returns string that wraps', () => {
     expect(wrap('Hello World', 5)).to.equal('Hello\nWorld')
   })
+  it('Returns string that wraps with large strings', () => {
+    expect(
+      wrap(
+        'Lorem ipsum dolor sit eu amet, elit na magna sem amet nulla vel purus ac ligula.',
+        20
+      )
+    ).to.equal(
+      'Lorem ipsum dolor\nsit eu amet, elit na\nmagna sem amet nulla\nvel purus ac ligula.'
+    )
+  })
 })

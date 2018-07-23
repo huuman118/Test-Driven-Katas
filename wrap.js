@@ -9,7 +9,7 @@ const wrap = (line, maxLen) => {
     if (outputStr.length === 0) {
       outputStr = wordArr[i]
       currCount = wordArr[i].length
-    } else if (currCount + wordArr[i].length >= maxLen) {
+    } else if (currCount + wordArr[i].length + 1 > maxLen) {
       outputStr = outputStr + '\n' + wordArr[i]
       currCount = wordArr[i].length
     } else {
